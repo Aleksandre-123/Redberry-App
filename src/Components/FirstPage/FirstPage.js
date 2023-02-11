@@ -4,7 +4,7 @@ import logo3 from '../../assets/logo3.png'
 import previous from '../../assets/previous.png'
 import { routingContext } from "../Context/RoutingContext";
 function FirstPage() {
-    const{backPreviousPage}=useContext(routingContext)
+    const{backPreviousPage,goNextPage}=useContext(routingContext)
   return (
     <div className="second_page">
       <div className="left">
@@ -63,8 +63,8 @@ function FirstPage() {
                 უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
               </span>
             </div>
-            <div className="next_button_parent">
-              <button className="next_button">შემდეგი</button>
+            <div className="first_page_next_button_parent">
+              <button className="next_button" onClick={goNextPage}>შემდეგი</button>
             </div>
           </form>
         </div>

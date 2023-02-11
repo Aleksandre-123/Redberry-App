@@ -4,14 +4,17 @@ export const routingContext=createContext()
 function RoutingContext(props) {
     const[page,setPage]=useState(0)
     const goNextPage=(e)=>{
-        e.preventDefault()
+        // e.preventDefault()
         setPage(page+1)
     }
     const backPreviousPage=(e)=>{
-        e.preventDefault()
+        // e.preventDefault()
         setPage(page-1)
     }
-    const value={goNextPage,backPreviousPage,page}
+    const formSubmit=(e)=>{
+      e.preventDefault()
+    }
+    const value={goNextPage,backPreviousPage,page,formSubmit}
   return (
     <routingContext.Provider value={value}>
         {props.children}

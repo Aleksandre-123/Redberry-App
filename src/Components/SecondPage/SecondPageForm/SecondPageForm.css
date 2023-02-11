@@ -1,15 +1,16 @@
 @font-face{
     font-family: HelveticaNeue;
-    src:url(../../HelveticaNeue.ttc)
+    src:url(../../../HelveticaNeue.ttc)
 }
-.left{
+.Second_page_left{
     width: 1098px;
-    height: 100vh;
+    height: 100%;
     background-color: #f9f9f9;
     display: flex;
+    flex-direction: column;
     padding-top: 47px;
     box-sizing: border-box;
-    justify-content: center;
+    align-items: center;
 }
 .left_wrapper{
     width: 798px;
@@ -41,8 +42,13 @@
 .header_top{
     margin-bottom: 12px;
 }
-.right{
+.third_page_right{
+    padding-top: 48px;
     width: 822px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .second_page{
     display: flex;
@@ -72,16 +78,18 @@
     color: rgba(0, 0, 0, 0.6);
 
 }
-.second_page_form_first_line{
+.third_page_form_first_line{
     display: flex;
+    flex-direction: column;
+    gap: 8px;
     width: 798px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
-.second_page_form_first_line_input{
+/* .third_page_form_first_line_input{
     display: flex;
     flex-direction: column;
     
-}
+} */
 .personal_data{
     margin-top:77px;
 }
@@ -101,10 +109,12 @@ label{
     color: #2E2E2E;
     margin-top:8px
 }
-.second_page_form_second_line{
+.third_page_form_second_line{
     display: flex;
-    align-items: center;
-    margin-top: 54px;
+    margin-top: 31px;
+    flex-direction: column;
+    gap: 8px;
+    width: 798px;
 }
 .attach_photo{
     opacity: 0;
@@ -137,8 +147,8 @@ label{
     font-family: HelveticaNeue;
     font-style: normal;
 }
-.second_page_form_third_line{
-    margin-top: 54px;
+.third_page_form_fourth_line{
+    margin-top: 33px;
     display: flex;
     flex-direction: column;
 }
@@ -146,6 +156,7 @@ label{
     max-width: 798px;
     min-width: 798px;
     width: 100%;
+    
     max-height: 103px;
     min-height: 103px;
     font-family: HelveticaNeue;
@@ -178,6 +189,7 @@ label{
     gap: 8px;
 }
 .large_inputs{
+    /* width: 798px; */
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #BCBCBC;
@@ -207,6 +219,24 @@ label{
     color: #2E2E2E;
     margin-top:8px
 }
+.previous_button{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 113px;
+    background: #6B40E3;
+    border-radius: 4px;
+    height: 48px;
+    border: none;
+    letter-spacing: 0.08em;
+    line-height: 21px;
+}
 .next_button{
     font-family: HelveticaNeue;
     font-style: normal;
@@ -225,10 +255,11 @@ label{
     letter-spacing: 0.08em;
     line-height: 21px;
 }
-.first_page_next_button_parent{
+.next_button_parent{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 160px;
+    width: 798px;
 }
 .right{
     display: flex;
@@ -236,4 +267,113 @@ label{
     padding-left: 54px;
     padding-bottom: 34px;
     box-sizing: border-box;
+}
+.third_page_form_third_line{
+    margin-top: 31px;
+    display: flex;
+    width: 798px;
+    justify-content: space-between;
+}
+.third_page_form_third_line_input{
+    display: flex;
+    flex-direction: column;
+}
+.third_page_line{
+    height: 1px;
+    background-color: #C1C1C1;
+    margin-top: 58px;
+    margin-bottom: 45px;
+}
+.experience_button{
+    width: 289px;
+    height: 48px;
+    border: none;
+    background-color: #62A1EB;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.email_address{
+    display: flex;
+    margin-bottom: 10px;
+}
+.phone_number{
+    display: flex;
+}
+.logo3{
+    width: 42px;
+    height: 42px;
+}
+.fullname{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight:bold;
+    font-size: 34px;
+    line-height: 42px;
+    color: #F93B1D;
+    margin-bottom: 17px;
+}
+.gmail{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+}
+.mobile{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #1A1A1A;
+}
+.gmail_icon{
+    margin-right: 12px;
+}
+.phone_icon{
+    margin-right: 12px;
+}
+.phone_number{
+    margin-bottom: 34px;
+}
+.about_me{
+    margin-bottom: 15px;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F93B1D;
+}
+.about_me_par{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: lowercase;
+    color: #000000;
+    width: 432px;
+}
+.top_content{
+    display: flex;
+    justify-content: space-between;
+}
+.logo3_parent{
+    width: 100%;
+    padding-bottom: 34px;
+    padding-left:43px;
+    box-sizing: border-box;
+}
+.right_line{
+    width: 662px;
+    margin-top: 19px;
+    height: 1px;
+    background-color: #C8C8C8;
 }
