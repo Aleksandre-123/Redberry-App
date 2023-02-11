@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import './FirstPage.css'
 import logo3 from '../../assets/logo3.png'
 import previous from '../../assets/previous.png'
+import { routingContext } from "../Context/RoutingContext";
 function FirstPage() {
+    const{backPreviousPage}=useContext(routingContext)
   return (
     <div className="second_page">
       <div className="left">
@@ -70,7 +72,7 @@ function FirstPage() {
       <div className="right">
         <img src={logo3} alt="logo3" className="logo3" />
       </div>
-      <img src={previous} alt="previous" className="previous" />
+      <img src={previous} onClick={backPreviousPage} alt="previous" className="previous" />
     </div>
   );
 }

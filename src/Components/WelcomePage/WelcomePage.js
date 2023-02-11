@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./WelcomePage.css";
 import logo from "../../assets/logo.png";
 import logo_2 from "../../assets/logo_2.png";
 import background from "../../assets/background.png";
+import { routingContext } from "../Context/RoutingContext";
 
 function WelcomePage() {
+  const{goNextPage}=useContext(routingContext)
   return (
     <div className="main" style={{backgroundImage:`url(${background})`}}>
       <div className="welcomeContent">
@@ -13,7 +15,7 @@ function WelcomePage() {
       </div>
       <img src={logo_2} alt="" class="logo_2"/>
       <div className="button_parent">
-        <button className="cv">რეზიუმეს დამატება</button>
+        <button onClick={goNextPage} className="cv">რეზიუმეს დამატება</button>
       </div>
     </div>
   );
