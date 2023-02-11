@@ -3,8 +3,11 @@ import './FirstPage.css'
 import logo3 from '../../assets/logo3.png'
 import previous from '../../assets/previous.png'
 import { routingContext } from "../Context/RoutingContext";
+import { validationContext } from "../Context/ValidationContext";
 function FirstPage() {
     const{backPreviousPage,goNextPage}=useContext(routingContext)
+    const{name,email,lastName,phone,changeName,
+      changeLastName,changeEmail,changePhone,}=useContext(validationContext)
   return (
     <div className="second_page">
       <div className="left">
@@ -19,13 +22,13 @@ function FirstPage() {
           <form className="personal_data">
             <div className="second_page_form_first_line">
               <div className="second_page_form_first_line_input">
-                <label for="">სახელი</label>
-                <input type="text" placeholder="ანზორ" className="small_inputs" />
+                <label >სახელი</label>
+                <input type="text" placeholder="ანზორ" className="small_inputs" value={name} onChange={changeName}/>
                 <span className="language">მინიმუმ 2 ასო, ქართული ასოები</span>
               </div>
               <div className="second_page_form_first_line_input">
-                <label for="">გვარი</label>
-                <input type="text" placeholder="მუმლაძე" className="small_inputs" />
+                <label >გვარი</label>
+                <input type="text" placeholder="მუმლაძე" className="small_inputs" value={lastName} onChange={changeLastName}/>
                 <span className="language">მინიმუმ 2 ასო, ქართული ასოები</span>
               </div>
             </div>
@@ -44,8 +47,9 @@ function FirstPage() {
               ></textarea>
             </div>
             <div className="second_page_form_fourth_line">
-              <label for="">ელ-ფოსტა</label>
+              <label >ელ-ფოსტა</label>
               <input
+                value={email} onChange={changeEmail}
                 type="email"
                 placeholder="anzor666@redberry.ge"
                 className="large_inputs"
@@ -53,8 +57,9 @@ function FirstPage() {
               <span className="email">უნდა მთავრდებოდეს @redberry.ge-ით</span>
             </div>
             <div className="second_page_form_fifth_line">
-              <label for="">მობილურის ნომერი</label>
+              <label>მობილურის ნომერი</label>
               <input
+                value={phone} onChange={changePhone}
                 type="text"
                 placeholder="+995 551 12 34 56"
                 className="large_inputs"

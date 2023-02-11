@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { routingContext } from '../../Context/RoutingContext'
+import { validationContext } from '../../Context/ValidationContext'
 import './SecondPageForm.css'
 function SecondPageForm() {
   const{formSubmit}=useContext(routingContext)
@@ -7,7 +8,7 @@ function SecondPageForm() {
     <form className="personal_data" onSubmit={formSubmit}>
             <div className="third_page_form_first_line">
               <label for="">თანამდებობა</label>
-              <input
+              <input    
                 type="text"
                 placeholder="დეველოპერი, დიზაინერი, ა.შ."
                 className="large_inputs"
