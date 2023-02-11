@@ -1,0 +1,240 @@
+@font-face{
+    font-family: HelveticaNeue;
+    src:url(../../HelveticaNeue.ttc)
+}
+.left{
+    width: 1098px;
+    height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    padding-top: 47px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.left_wrapper{
+    width: 798px;
+    
+}
+.header_top{
+    display: flex;
+    justify-content: space-between;
+    width: 798px;
+    
+}
+.header_bottom{
+    width: 798px;
+    height: 1px;
+    background-color: black;
+}
+.personal_info{
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    font-weight: 700;
+}
+.page_one{
+    font-family:HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.header_top{
+    margin-bottom: 12px;
+}
+.right{
+    width: 822px;
+}
+.second_page{
+    display: flex;
+    position: relative;
+    
+}
+.previous{
+    position: absolute;
+    top:45px;
+    left:48px;
+    cursor: pointer;
+}
+.small_inputs{
+    width: 371px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+.second_page_form_first_line{
+    display: flex;
+    width: 798px;
+    justify-content: space-between;
+}
+.second_page_form_first_line_input{
+    display: flex;
+    flex-direction: column;
+    
+}
+.personal_data{
+    margin-top:77px;
+}
+label{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+}
+.language{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2E2E2E;
+    margin-top:8px
+}
+.second_page_form_second_line{
+    display: flex;
+    align-items: center;
+    margin-top: 54px;
+}
+.attach_photo{
+    opacity: 0;
+    width: 107px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.personal_photo{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 19px;
+}
+.attach_button{
+    position: relative;
+    width: 107px;
+    height: 27px;
+    border: none;
+    color: white;
+    background: #0E80BF;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.attach_button_span{
+    color: white;
+    font-family: HelveticaNeue;
+    font-style: normal;
+}
+.second_page_form_third_line{
+    margin-top: 54px;
+    display: flex;
+    flex-direction: column;
+}
+.about_me_input{
+    max-width: 798px;
+    min-width: 798px;
+    width: 100%;
+    max-height: 103px;
+    min-height: 103px;
+    font-family: HelveticaNeue;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-top: 13px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.about_person_header{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 8px;
+}
+.second_page_form_fourth_line{
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px;
+    gap: 8px;
+}
+.second_page_form_fifth_line{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.large_inputs{
+    /* width: 798px; */
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    font-family: HelveticaNeue;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.email{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2E2E2E;
+    margin-top:8px
+}
+.number{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2E2E2E;
+    margin-top:8px
+}
+.next_button{
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 151px;
+    background: #6B40E3;
+    border-radius: 4px;
+    height: 48px;
+    border: none;
+    letter-spacing: 0.08em;
+    line-height: 21px;
+}
+.next_button_parent{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 160px;
+}
+.right{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 54px;
+    padding-bottom: 34px;
+    box-sizing: border-box;
+}
