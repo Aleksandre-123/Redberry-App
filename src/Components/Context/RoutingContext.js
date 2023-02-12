@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState } from "react";
+import { fetchContext } from "./FetchContext";
 import { formValuesContext } from "./FormValuesContext";
 
 export const routingContext = createContext();
 function RoutingContext(props) {
-  const { name, email, lastName, phone } = useContext(formValuesContext);
+  const{fetchData}=useContext(fetchContext)
+  const { name, email, lastName, phone, employer, position, end, start, description } = useContext(formValuesContext);
   const langDetectorRegex = /^[ა-ჰ\s]*$/;
   const telRegex =
     /\+\S*9\S*9\S*5\S*5\S*[976514]\S*\d\S*\d\S*\d\S*\d\S*\d\S*\d\S*\d\S*/;
@@ -12,7 +14,13 @@ function RoutingContext(props) {
   const lastNameValid =lastName.trim().length > 2 && langDetectorRegex.test(lastName);
   const phoneValid = telRegex.test(phone) && phone.trim().length === 13;
   const emailValid = emailRegex.test(email);
+  const positionValid = position.trim().length>2
+  const employerValid = employer.trim().length>2
+  const startValid = start.trim().length>0
+  const endValid = end.trim().length>0
+  const descValid = description.trim().length>0
   
+  console.log(fetchData);
   const [notUrl,setNotUrl]=useState(false)  
   const [url,setUrl]=useState(null)
   const [image,setImage]=useState(null)
@@ -25,10 +33,11 @@ function RoutingContext(props) {
   
   const photoValid = type.trim().length>0
   const valid = nameValid && lastNameValid && phoneValid && emailValid && photoValid;
+  const validSecondPage = positionValid && employerValid && startValid && endValid && descValid;
   const goNextPage = (e) => {
     e.preventDefault();
     if (page === 1) {
-      if (valid) {
+      if (nameValid) {
         setPage(page + 1);
       } else {
         nameValid ? setNamesErrors(false) : setNamesErrors(true);
@@ -36,6 +45,10 @@ function RoutingContext(props) {
         emailValid ? setEmailError(false) : setEmailError(true);
         phoneValid ? setPhoneError(false) : setPhoneError(true);
         photoValid ? setNotUrl(false) : setNotUrl(true)
+      }
+    } else if(page===2){
+      if (validSecondPage) {
+        setPage(page + 1);
       }
     } else {
       setPage(page + 1);

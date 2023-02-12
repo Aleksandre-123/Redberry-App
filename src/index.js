@@ -4,19 +4,19 @@ import './index.css';
 import App from './App';
 import RoutingContext from './Components/Context/RoutingContext';
 import FormValuesContext from './Components/Context/FormValuesContext';
-import ErrorContext from './Components/Context/ErrorContext';
+import FetchContext from './Components/Context/FetchContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormValuesContext>
-      <RoutingContext>
-        <ErrorContext>
-          <App/>
-        </ErrorContext>
-      </RoutingContext>
-    </FormValuesContext>
+    <FetchContext>
+      <FormValuesContext>
+        <RoutingContext>
+            <App/>
+        </RoutingContext>
+      </FormValuesContext>
+    </FetchContext>
   </React.StrictMode>
 );
 
