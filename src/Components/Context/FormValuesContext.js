@@ -1,12 +1,16 @@
 import React,{createContext,useState} from 'react'
 
 
-export const validationContext=createContext()
-function ValidationContext(props) {
+export const formValuesContext=createContext()
+function FormValuesContext(props) {
   const[name,setName]=useState('')  
   const[email,setEmail]=useState('')
   const[phone,setPhone]=useState('')
   const[lastName,setLastName]=useState('')
+  const[about,setAbout]=useState('')
+  const aboutChange=(e)=>{
+    setAbout(e.target.value)
+  }
   const changeName=(e)=>{
     setName(e.target.value)
   }
@@ -19,13 +23,13 @@ function ValidationContext(props) {
   const changePhone=(e)=>{
     setPhone(e.target.value)
   }
-  const value={changeName,changeLastName,changeEmail,changePhone,name,email,lastName,phone}
+  const value={changeName,changeLastName,changeEmail,changePhone,name,email,lastName,phone,aboutChange,about}
   return (
-    <validationContext.Provider value={value}>
+    <formValuesContext.Provider value={value}>
         {props.children}
-    </validationContext.Provider>
+    </formValuesContext.Provider>
   )
 }
 
 
-export default ValidationContext
+export default FormValuesContext

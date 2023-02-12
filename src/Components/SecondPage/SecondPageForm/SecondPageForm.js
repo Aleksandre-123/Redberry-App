@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { routingContext } from '../../Context/RoutingContext'
-import { validationContext } from '../../Context/ValidationContext'
+// import { validationContext } from '../../Context/ValidationContext'
 import './SecondPageForm.css'
 function SecondPageForm() {
   const{formSubmit}=useContext(routingContext)
   return (
     <form className="personal_data" onSubmit={formSubmit}>
             <div className="third_page_form_first_line">
-              <label for="">თანამდებობა</label>
+              <label>თანამდებობა</label>
               <input    
                 type="text"
                 placeholder="დეველოპერი, დიზაინერი, ა.შ."
@@ -16,7 +16,7 @@ function SecondPageForm() {
               <span className="language">მინიმუმ 2 სიმბოლო</span>
             </div>
             <div className="third_page_form_second_line">
-              <label for="">დამსაქმებელი</label>
+              <label>დამსაქმებელი</label>
               <input
                 type="text"
                 placeholder="დამსაქმებელი"
@@ -26,7 +26,7 @@ function SecondPageForm() {
             </div>
             <div className="third_page_form_third_line">
               <div className="third_page_form_third_line_input">
-                <label for="">დაწყების რიცხვი</label>
+                <label>დაწყების რიცხვი</label>
                 <input
                   type="date"
                   placeholder="ანზორ"
@@ -34,7 +34,7 @@ function SecondPageForm() {
                 />
               </div>
               <div className="third_page_form_third_line_input">
-                <label for="">დამთავრების რიცხვი</label>
+                <label>დამთავრების რიცხვი</label>
                 <input
                   type="date"
                   placeholder="მუმლაძე"

@@ -24,6 +24,11 @@
     width: 798px;
     
 }
+.avatar{
+    width: 246px;
+    height: 246px;
+    border-radius: 100%;
+}
 .header_bottom{
     width: 798px;
     height: 1px;
@@ -63,6 +68,25 @@
     top:45px;
     left:48px;
     cursor: pointer;
+}
+.next_button::after{
+    content: 'შემდეგი';
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+}
+.next_button:hover{
+    width: 261px;
+    background-color: #7949FF;
+    height: 48px;
+}
+.next_button:hover::after{
+    content: 'ჩანაწერის დამატება';
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
 }
 .small_inputs{
     width: 371px;
@@ -156,12 +180,9 @@ label{
     flex-direction: column;
 }
 .about_me_input{
-    max-width: 798px;
-    min-width: 798px;
-    width: 100%;
-    
-    max-height: 103px;
-    min-height: 103px;
+    width: 798px;
+    height: 103px;
+    resize: none;
     font-family: HelveticaNeue;
     background: #FFFFFF;
     border: 1px solid #BCBCBC;
@@ -290,6 +311,7 @@ label{
 .experience_button{
     width: 289px;
     height: 48px;
+    cursor: pointer;
     border: none;
     background-color: #62A1EB;
     font-family: HelveticaNeue;

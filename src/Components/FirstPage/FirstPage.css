@@ -55,7 +55,7 @@
     left:48px;
     cursor: pointer;
 }
-.small_inputs{
+.first_page_small_inputs{
     width: 371px;
     height: 48px;
     background: #FFFFFF;
@@ -72,7 +72,30 @@
     color: rgba(0, 0, 0, 0.6);
 
 }
-.second_page_form_first_line{
+/* .first_page_small_inputs::after{
+    content: url('../../assets/done.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    display: inline-block; 
+} */
+.error{
+    border: 2px solid #EF5050;
+}
+.errorPhone{
+    color: #EF5050;
+}
+/* .phoneError{
+    border: 2px solid #EF5050;
+}
+.emailError{
+    border: 2px solid #EF5050;
+}  */
+.second_page_form_first_line{ 
     display: flex;
     width: 798px;
     justify-content: space-between;
@@ -92,7 +115,7 @@ label{
     font-size: 16px;
     line-height: 21px;
 }
-.language{
+.first_page_language{
     font-family: HelveticaNeue;
     font-style: normal;
     font-weight: 300;
@@ -101,6 +124,7 @@ label{
     color: #2E2E2E;
     margin-top:8px
 }
+
 .second_page_form_second_line{
     display: flex;
     align-items: center;
@@ -142,12 +166,12 @@ label{
     display: flex;
     flex-direction: column;
 }
+
 .about_me_input{
-    max-width: 798px;
-    min-width: 798px;
-    width: 100%;
-    max-height: 103px;
-    min-height: 103px;
+ 
+    width: 798px;
+    height: 103px;
+    resize: none;
     font-family: HelveticaNeue;
     background: #FFFFFF;
     border: 1px solid #BCBCBC;
@@ -207,6 +231,7 @@ label{
     color: #2E2E2E;
     margin-top:8px
 }
+
 .next_button{
     font-family: HelveticaNeue;
     font-style: normal;
@@ -225,6 +250,25 @@ label{
     letter-spacing: 0.08em;
     line-height: 21px;
 }
+.next_button::after{
+    content: 'შემდეგი';
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+}
+.next_button:hover{
+    width: 261px;
+    background-color: #7949FF;
+    height: 48px;
+}
+.next_button:hover::after{
+    content: 'ჩანაწერის დამატება';
+    font-family: HelveticaNeue;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+}
 .first_page_next_button_parent{
     display: flex;
     justify-content: flex-end;
@@ -236,4 +280,16 @@ label{
     padding-left: 54px;
     padding-bottom: 34px;
     box-sizing: border-box;
+}
+.next_button:hover{
+    content:'aasqwd'
+}
+.attached_file_name{
+    margin-left: 15px;
+}
+.error{
+    border: 2px solid #EF5050;
+}
+.errorText{
+    color: #EF5050;
 }

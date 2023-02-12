@@ -3,17 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import RoutingContext from './Components/Context/RoutingContext';
-import ValidationContext from './Components/Context/ValidationContext';
+import FormValuesContext from './Components/Context/FormValuesContext';
+import ErrorContext from './Components/Context/ErrorContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ValidationContext>
+    <FormValuesContext>
       <RoutingContext>
-        <App/>
+        <ErrorContext>
+          <App/>
+        </ErrorContext>
       </RoutingContext>
-    </ValidationContext>
+    </FormValuesContext>
   </React.StrictMode>
 );
 

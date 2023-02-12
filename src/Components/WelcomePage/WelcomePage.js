@@ -10,10 +10,10 @@ function WelcomePage() {
   return (
     <div className="main" style={{backgroundImage:`url(${background})`}}>
       <div className="welcomeContent">
-        <img src={logo} alt="logo" class="logo" />
+        <img src={logo} alt="logo" className="logo" />
         <div className="line"></div>
       </div>
-      <img src={logo_2} alt="" class="logo_2"/>
+      <img src={logo_2} alt="" className="logo_2"/>
       <div className="button_parent">
         <button onClick={goNextPage} className="cv">რეზიუმეს დამატება</button>
       </div>

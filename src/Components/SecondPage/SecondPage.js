@@ -2,14 +2,24 @@ import React, { useContext, useState } from "react";
 import "./SecondPage.css";
 import logo3 from "../../assets/logo3.png";
 import avatar from "../../assets/avatar.png";
+import phone2 from "../../assets/phone2.png";
+import email2 from "../../assets/email2.png";
 import previous from "../../assets/previous.png";
 import { routingContext } from "../Context/RoutingContext";
 import SecondPageForm from "./SecondPageForm/SecondPageForm";
+import { formValuesContext } from "../Context/FormValuesContext";
+
+let id=2
 function SecondPage() {
-  const { backPreviousPage, goNextPage } = useContext(routingContext);
-  const [ experience, setExperience ] = useState([true]);
+  const { backPreviousPage, goNextPage,url } = useContext(routingContext);
+  const{name,email,lastName,phone,about}=useContext(formValuesContext)
+  const [ experience, setExperience ] = useState([{id:'1',condition:true}]);
   const Experience = (e) => {
-    setExperience([...experience, experience.push(true)]);
+    id+=1
+    setExperience([...experience, {
+      id:id,
+      condition:true
+    }]);
   };
   return (
     <div className="second_page_two">
@@ -21,12 +31,10 @@ function SecondPage() {
               <span className="page_one">2/3</span>
             </div>
             <div className="header_bottom"></div>
-          </div>
-          
-          
+          </div>  
           {
             experience.map(item=>{
-              return <SecondPageForm/> 
+              return <SecondPageForm key={item.id}/>
             })
           }
           <div className="third_page_form_fifth_line">
@@ -44,7 +52,7 @@ function SecondPage() {
             უკან
           </button>
           <button type="submit" onClick={goNextPage} className="next_button">
-            შემდეგი
+            
           </button>
         </div>
       </div>
@@ -52,31 +60,26 @@ function SecondPage() {
         <div className="top_content_parent">
           <div className="top_content">
             <div className="top_left">
-              <h1 className="fullname">ანზორ მუმლაძე</h1>
+              <h1 className="fullname">{name} {lastName}</h1>
               <div className="email_address">
                 <img
-                  src="../../assets/email.png"
+                  src={email2}
                   alt=""
                   className="gmail_icon"
                 />
-                <span className="gmail">anzorr666@redberry.ge</span>
+                <span className="gmail">{email}</span>
               </div>
               <div className="phone_number">
-                <img
-                  src="../../assets/phone.png"
-                  alt=""
-                  className="phone_icon"
-                />
-                <span className="mobile">+995 597 63 45 16</span>
+                <img src={phone2} alt="" className="phone_icon"/>
+                <span className="mobile">{phone}</span>
               </div>
               <h3 className="about_me">შემს შესახებ</h3>
               <p className="about_me_par">
-                ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ ავდგები
-                გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ.{" "}
+                {about}
               </p>
             </div>
             <div className="top_right">
-              <img src={avatar} alt="" className="avatar" />
+              <img src={url} alt="" className="avatar" />
             </div>
           </div>
           <div className="right_line"></div>
