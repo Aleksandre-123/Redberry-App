@@ -37,7 +37,7 @@ function RoutingContext(props) {
   const goNextPage = (e) => {
     e.preventDefault();
     if (page === 1) {
-      if (nameValid) {
+      if (valid) {
         setPage(page + 1);
       } else {
         nameValid ? setNamesErrors(false) : setNamesErrors(true);
@@ -90,7 +90,8 @@ function RoutingContext(props) {
     image,
     url,
     photoValid,
-    notUrl
+    notUrl,
+    validSecondPage
   };
   return (
     <routingContext.Provider value={value}>

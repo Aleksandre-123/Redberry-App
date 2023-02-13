@@ -11,9 +11,9 @@ function App() {
   return (
     <Fragment>
       {/* {page===0&&<WelcomePage/>}
-      {page===1&&<FirstPage />}
-      {page===2&&<SecondPage/>} */}
-      {page===0&&<ThirdPage/>}
+      {page===1&&<FirstPage />} */}
+      {page===0&&<SecondPage/>}
+      {/* {page===3&&<ThirdPage/>} */}
     </Fragment>
   );
 }

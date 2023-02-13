@@ -68,6 +68,11 @@ function FormValuesContext(props) {
     changeDesc,
     end,
     changeEnd,
+    setEmployer,
+    setStart,
+    setEnd,
+    setDesc,
+    setPosition
   };
   return (
     <formValuesContext.Provider value={value}>

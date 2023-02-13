@@ -8,21 +8,45 @@ import previous from "../../assets/previous.png";
 import { routingContext } from "../Context/RoutingContext";
 import SecondPageForm from "./SecondPageForm/SecondPageForm";
 import { formValuesContext } from "../Context/FormValuesContext";
+import SecondPageRight from "./SecondPageRight/SecondPageRight";
 
 let id=2
+
 function SecondPage() {
-  const { backPreviousPage, goNextPage,url } = useContext(routingContext);
-  const{name,email,lastName,phone,about}=useContext(formValuesContext)
+  const { backPreviousPage, goNextPage,url,validSecondPage } = useContext(routingContext);
+  const{name,email,lastName,phone,about,description,employer,start,end,position,setEmployer,
+    setStart,
+    setEnd,
+    setDesc,
+    setPosition}=useContext(formValuesContext)
   const [ experience, setExperience ] = useState([{id:'1',condition:true}]);
+  const [expData,setExpData]=useState([])
   const Experience = (e) => {
     id+=1
-    setExperience([...experience, {
-      id:id,
-      condition:true
-    }]);
+    if(validSecondPage){
+      setExperience([...experience, {
+        id:id,
+        condition:true
+      }]);
+      setExpData([...expData,{
+        id:id,
+        description:description,
+        employer:employer,
+        start:start,
+        end:end,
+        position:position
+      }])
+      setEmployer(employer)
+      setStart(start)
+      setEnd(end)
+      setDesc(description)
+      setPosition(position)
+      
+    }
   };
   return (
     <div className="second_page_two">
+      
       <div className="Second_page_left">
         <div className="left_wrapper">
           <div className="header">
@@ -57,7 +81,9 @@ function SecondPage() {
         </div>
       </div>
       <div className="third_page_right">
-        <div className="top_content_parent">
+        <div className="top_wrapper">
+    
+          <div className="top_content_parent">
           <div className="top_content">
             <div className="top_left">
               <h1 className="fullname">{name} {lastName}</h1>
@@ -73,7 +99,7 @@ function SecondPage() {
                 <img src={phone2} alt="" className="phone_icon"/>
                 <span className="mobile">{phone}</span>
               </div>
-              <h3 className="about_me">შემს შესახებ</h3>
+              <h3 className="about_me">ჩემს შესახებ</h3>
               <p className="about_me_par">
                 {about}
               </p>
@@ -83,10 +109,22 @@ function SecondPage() {
             </div>
           </div>
           <div className="right_line"></div>
+          {
+            experience.map(item=>{
+              return <SecondPageRight key={item.id} item={item}/>
+            })
+          }
+          {
+            expData.map(item=>{
+              return <SecondPageRight key={item.id} item={item}/>
+            })
+          }
+        </div>
         </div>
         <div className="logo3_parent">
           <img src={logo3} alt="logo3" className="logo3" />
         </div>
+        
       </div>
       <img
         src={previous}
